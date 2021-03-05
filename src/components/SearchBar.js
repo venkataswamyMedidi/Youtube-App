@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 class SearchBar extends React.Component {
-  state = { term: '' };
+  state = { term: "" };
 
-  onInputChange = event => {
+  onInputChange = (event) => {
     this.setState({ term: event.target.value });
   };
 
-  onFormSubmit = event => {
+  onFormSubmit = (event) => {
     event.preventDefault();
 
     this.props.onFormSubmit(this.state.term);
